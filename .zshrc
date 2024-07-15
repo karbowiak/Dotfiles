@@ -3,6 +3,9 @@ alias ls="eza --color=always --long --icons=always"
 alias ga="git add"
 alias gs="git status"
 alias gap="git add -p"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gp="git push"
 
 # ZSH configuration
 HISTSIZE=10000
