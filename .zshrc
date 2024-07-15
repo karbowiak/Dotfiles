@@ -12,9 +12,6 @@ HISTSIZE=10000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
-#ZSH_TMUX_FIXTERM=true
-#ZSH_TMUX_AUTOSTART=true
-#ZSH_TMUX_AUTOCONNECT=true
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
