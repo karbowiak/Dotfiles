@@ -56,6 +56,7 @@ packages=(
     "gnu-indent"
     "gnu-sed"
     "gnu-tar"
+    "stow"
 )
 
 # Generate a single string of package names
@@ -67,20 +68,11 @@ brew install -q $packages_string
 # Get the directory this script is in
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# General Symlinks
-ln -sfv $DIR/zprofile ~/.zprofile
-ln -sfv $DIR/zshrc ~/.zshrc
-ln -sfv $DIR/tmux.conf ~/.tmux.conf
-
-# Alacritty
-mkdir -p ~/.config/alacritty/themes
-ln -sfv $DIR/config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
-ln -sfv $DIR/config/alacritty/themes/github_dark.toml ~/.config/alacritty/themes/github_dark.toml
-
-# OhMyPosh
-mkdir -p ~/.config/ohmyposh
-ln -sfv $DIR/config/ohmyposh/config.yaml ~/.config/ohmyposh/config.yaml
-
 # Tmux
 mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if [ ! -d ~/.tmux/plugins/tpm ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+else
+    cd ~/.tmux/plugins/tpm
+    git pull
+fi
