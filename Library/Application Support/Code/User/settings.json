@@ -27,8 +27,8 @@
 
     // Project Manager
     "projectManager.git.baseFolders": [
-        "/home/karbowiak/Projects",
-        "/home/karbowiak/Work"
+        "~/Projects",
+        "~/Work"
     ],
 
     // Search
