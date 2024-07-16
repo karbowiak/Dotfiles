@@ -1,7 +1,11 @@
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [[ "$OSTYPE" == "darwin"* ]] && [ -f "/opt/homebrew/bin/brew" ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
-# Added by Toolbox App
-export PATH="$PATH:/Users/karbowiak/Library/Application Support/JetBrains/Toolbox/scripts"
+if [ -d "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" ]; then
+  export PATH="$PATH:/Users/karbowiak/Library/Application Support/JetBrains/Toolbox/scripts"
+fi
 
-# Added by OrbStack: command-line tools and integration
-source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+if [ -f "$HOME/.orbstack/shell/init.zsh" ]; then
+  source "$HOME/.orbstack/shell/init.zsh"
+fi
