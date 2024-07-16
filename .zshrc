@@ -1,6 +1,10 @@
 # Exports
-export PATH="$PATH:$HOME/.local/bin"
-export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+if [ -d "$HOME/.local/bin" ]; then
+  export PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -S ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock ]; then
+  export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+fi
 
 # Aliases
 alias ls="eza --color=always --long --icons=always"
@@ -52,7 +56,7 @@ fi
 source "$ZINIT_HOME/zinit.zsh"
 
 # Load plugins
-zinit for \
+zinit wait lucid wait'1' for \
   light-mode zsh-users/zsh-syntax-highlighting \
   light-mode zsh-users/zsh-completions \
   light-mode zsh-users/zsh-autosuggestions \
@@ -65,7 +69,7 @@ zinit light zdharma/fast-syntax-highlighting
 
 # Load oh-my-zsh plugins
 # Look for plugins here https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins
-zinit wait lucid for \
+zinit wait lucid wait'1' for \
   OMZP::sudo \
   OMZP::aws \
   OMZP::command-not-found \
@@ -98,7 +102,6 @@ zinit cdreplay -q
 # Load 1PasswordCLi
 eval "$(op completion zsh)";
 source /Users/karbowiak/.config/op/plugins.sh
-
 
 # Setup zoxide
 eval "$(zoxide init --cmd cd zsh)"
