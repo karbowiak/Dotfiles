@@ -72,8 +72,8 @@ packages=(
     "stow"
 
     # Fonts
-    "font-monaspace-nerd-font"
-    "font-noto-sans-symbols-2"
+    "homebrew/cask/font-monaspace-nerd-font"
+    "homebrew/cask/font-noto-sans-symbols-2"
 )
 
 # Install packages

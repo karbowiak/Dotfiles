@@ -216,6 +216,7 @@
     "php-cs-fixer.autoFixBySemicolon": true,
     "php-cs-fixer.formatHtml": false,
     "php-cs-fixer.documentFormattingProvider": true,
+    "php-cs-fixer.lastDownload": 1721168020899,
 
     // PHPDoc Block
     "php-docblocker.returnGap": true,
