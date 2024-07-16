@@ -2,12 +2,49 @@
     // VSCode Visuals
     "workbench.colorTheme": "Tokyo Night",
     "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.sideBar.location": "right",
     "workbench.iconTheme": "material-icon-theme",
+    "scm.inputFontSize": 15,
+    "debug.console.fontSize": 15,
+    "markdown.preview.fontSize": 15,
+
+    // Files
+    "files.autoSave": "onFocusChange",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.blade.php": "html",
+        "*.php": "php",
+        "*.vue": "vue",
+        "*.php-cs": "php"
+    },
+
+    // Project Manager
+    "projectManager.git.baseFolders": [
+        "/home/karbowiak/Projects",
+        "/home/karbowiak/Work"
+    ],
+
+    // Search
+    "search.collapseResults": "alwaysCollapse",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.git": true,
+        "**/storage": true,
+        "**/tests": true,
+        "_ide_helper.php": true,
+        "_ide_helper_models.php": true,
+        "package-lock.json": true
+    },
 
     // Editor
     "editor.fontSize": 14,
     "editor.fontFamily": "MesloLGS Nerd Font Mono",
+    "editor.inlineSuggest.enabled": true,
     "editor.tokenColorCustomizations": {
         "[Tokyo Night]": { // or "[Tokyo Night Storm]"
             "textMateRules": [
@@ -70,14 +107,30 @@
     "editor.renderControlCharacters": true,
     "editor.stickyScroll.enabled": true,
 
+    // TODO Tree
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "@TODO",
+        "@FIXME",
+        "[ ]",
+        "[x]"
+    ],
+
     // Terminal
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
     "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.defaultProfile.linux": "tmux",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.shellIntegration.enabled": true,
     "terminal.integrated.allowChords": true,
+    "terminal.integrated.tabs.enabled": false,
+    "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.ignoreProcessNames": [
         "starship",
         "oh-my-posh",
@@ -128,4 +181,89 @@
         "**/*.zsh-theme": true
     },
     "shellcheck.ignoreFileSchemes": ["git", "gitfs", "output"],
+
+    // PHP
+    "php.suggest.basic": true,
+
+    // PHPCS
+    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+    "php-cs-fixer.onsave": true,
+    "php-cs-fixer.rules": "@PSR2",
+    "php-cs-fixer.config": ".php_cs;.php_cs.dist",
+    "php-cs-fixer.allowRisky": false,
+    "php-cs-fixer.pathMode": "override",
+    "php-cs-fixer.exclude": [
+        "**/.git/**",
+        "**/.svn/**",
+        "**/.hg/**",
+        "**/CVS/**",
+        "**/.DS_Store/**",
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/storage/**",
+        "**/resources/views/**",
+        "**/database/migrations/**",
+        "**/tests/**",
+        "**/storage/framework/views/**",
+        "**/vendor",
+        "_ide_helper.php",
+        "_ide_helper_models"
+    ],
+    "php-cs-fixer.autoFixByBracket": true,
+    "php-cs-fixer.autoFixBySemicolon": true,
+    "php-cs-fixer.formatHtml": false,
+    "php-cs-fixer.documentFormattingProvider": true,
+
+    // PHPDoc Block
+    "php-docblocker.returnGap": true,
+    "php-docblocker.qualifyClassNames": true,
+    "php-docblocker.alignParams": true,
+    "php-docblocker.useShortNames": true,
+    "php-docblocker.author": {
+        "name": "Michael Karbowiak",
+        "email": "michael@karbowiak.dk"
+    },
+
+    // SonarLint
+    "sonarlint.rules": {
+        "php:S1808": {
+            "level": "off"
+        },
+        "php:S112": {
+            "level": "off"
+        },
+        "php:S103": {
+            "level": "off"
+        },
+        "php:S107": {
+            "level": "off"
+        },
+        "php:S3776": {
+            "level": "off"
+        },
+        "docker:S6595": {
+            "level": "off"
+        },
+        "php:S4833": {
+            "level": "off"
+        },
+        "php:S1186": {
+            "level": "off"
+        },
+        "php:S125": {
+            "level": "off"
+        },
+        "kubernetes:S6869": {
+            "level": "off"
+        },
+        "kubernetes:S6864": {
+            "level": "off"
+        },
+        "kubernetes:S6865": {
+            "level": "off"
+        }
+    },
+
+    // Svelte
+    "svelte.enable-ts-plugin": true,
 }
