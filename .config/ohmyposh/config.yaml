@@ -25,14 +25,6 @@ blocks:
           branch_icon: ""
           commit_icon: "@"
           fetch_status: true
-      - type: kubectl
-        style: plain
-        foreground: p:grey
-        background: transparent
-        template: " {{ .Context }}{{ if .Namespace }}/{{ .Namespace }}{{ end }}"
-        properties:
-          context_icon: ""
-          namespace_icon: ""
 
   - type: rprompt
     overflow: hidden
