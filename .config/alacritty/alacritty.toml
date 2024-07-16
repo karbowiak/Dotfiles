@@ -1,5 +1,5 @@
 import = [
-"~/.config/alacritty/themes/github_dark.toml"
+"~/.config/alacritty/themes/tokyo_nights.toml"
 ]
 
 [env]
@@ -12,7 +12,7 @@ dimensions.columns = 150
 dimensions.lines = 40
 decorations = "Buttonless"
 
-opacity = 0.8
+opacity = 0.55
 blur = true
 
 [font]
