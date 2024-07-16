@@ -77,17 +77,14 @@ packages=(
 packages_string=$(printf "%s " "${packages[@]}")
 
 # Install packages
-brew install -q $packages_string
-
-# Get the directory this script is in
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+brew install -q "$packages_string"
 
 # Tmux
 mkdir -p ~/.tmux/plugins
 if [ ! -d ~/.tmux/plugins/tpm ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 else
-    cd ~/.tmux/plugins/tpm
+    cd ~/.tmux/plugins/tpm || exit
     git pull
 fi
 
