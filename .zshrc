@@ -8,6 +8,7 @@ fi
 
 # Aliases
 alias ls="eza --color=always --long --icons=always"
+alias cat="bat"
 alias ga="git add"
 alias gs="git status"
 alias gap="git add -p"

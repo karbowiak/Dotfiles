@@ -28,6 +28,16 @@ packages=(
     "tmux"
     "oh-my-posh"
     "reattach-to-user-namespace"
+    "nowplaying-cli"
+    "bash"
+    "bc"
+    "coreutils"
+    "gawk"
+    "gh"
+    "glab"
+    "gsed"
+    "bat"
+    "git-delta"
 
     # Programming Languages and Package Managers
     "composer"
@@ -57,6 +67,10 @@ packages=(
     "gnu-sed"
     "gnu-tar"
     "stow"
+
+    # Fonts
+    "font-monaspace-nerd-font"
+    "font-noto-sans-symbols-2"
 )
 
 # Generate a single string of package names
