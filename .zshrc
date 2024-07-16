@@ -1,3 +1,7 @@
+# Exports
+export PATH="$PATH:$HOME/.local/bin"
+export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+
 # Aliases
 alias ls="eza --color=always --long --icons=always"
 alias ga="git add"
@@ -53,6 +57,7 @@ zinit for \
   light-mode zsh-users/zsh-completions \
   light-mode zsh-users/zsh-autosuggestions \
   light-mode zsh-users/zsh-history-substring-search \
+  light-mode 3v1n0/zsh-bash-completions-fallback \
   light-mode Aloxaf/fzf-tab
 
 zinit light trapd00r/LS_COLORS
@@ -89,6 +94,11 @@ bindkey -M vicmd 'j' history-substring-search-down
 autoload -Uz compinit
 compinit
 zinit cdreplay -q
+
+# Load 1PasswordCLi
+eval "$(op completion zsh)";
+source /Users/karbowiak/.config/op/plugins.sh
+
 
 # Setup zoxide
 eval "$(zoxide init --cmd cd zsh)"
