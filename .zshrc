@@ -100,7 +100,7 @@ compinit
 zinit cdreplay -q
 
 # Load 1PasswordCLi
-eval "$(op completion zsh)";
+eval "$(op completion zsh)"; compdef _op op
 source /Users/karbowiak/.config/op/plugins.sh
 
 # Setup zoxide
