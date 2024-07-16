@@ -3,7 +3,7 @@ if [[ "$OSTYPE" == "darwin"* ]] && [ -f "/opt/homebrew/bin/brew" ]; then
 fi
 
 if [ -d "$HOME/Library/Application Support/JetBrains/Toolbox/scripts" ]; then
-  export PATH="$PATH:/Users/karbowiak/Library/Application Support/JetBrains/Toolbox/scripts"
+  export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 fi
 
 if [ -f "$HOME/.orbstack/shell/init.zsh" ]; then
