@@ -90,3 +90,5 @@ else
     cd ~/.tmux/plugins/tpm
     git pull
 fi
+
+# For each extension in the vscode.extensions.txt file, install them with code --install-extension

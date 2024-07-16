@@ -2,3 +2,6 @@
 .vscode/*
 .editorconfig
 setup.sh
+vscode.extensions.txt
+vscode.extensions.txt.bak
+vscode.settings.json.bak
