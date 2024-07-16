@@ -3,13 +3,12 @@
 	name = Michael Karbowiak
 	email = michael@karbowiak.dk
 	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3CnISvv/khWRib7D0u//4uZpfIMNXjLv0s5VM1Losz
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
-	allowedSignersFile = /Users/karbowiak/.config/git/allowed_signers
-[commit]
-	gpgsign = true
+#[gpg]
+#	format = ssh
+#[gpg "ssh"]
+#  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+#[commit]
+#	gpgsign = true
 [init]
 	defaultBranch = main
 [core]
