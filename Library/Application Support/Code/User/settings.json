@@ -1,276 +1,271 @@
 {
-    // General settings
-    "explorer.confirmDelete": false,
+  // General settings
+  "explorer.confirmDelete": false,
 
-    // VSCode Visuals
-    "workbench.colorTheme": "Tokyo Night",
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.editor.enablePreview": true,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.sideBar.location": "right",
-    "workbench.iconTheme": "material-icon-theme",
-    "scm.inputFontSize": 15,
-    "debug.console.fontSize": 15,
-    "markdown.preview.fontSize": 15,
+  // VSCode Visuals
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.sideBar.location": "right",
+  "workbench.iconTheme": "material-icon-theme",
+  "scm.inputFontSize": 15,
+  "debug.console.fontSize": 15,
+  "markdown.preview.fontSize": 15,
 
-    // Files
-    "files.autoSave": "onFocusChange",
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    "files.trimTrailingWhitespace": true,
-    "files.associations": {
-        "*.blade.php": "html",
-        "*.php": "php",
-        "*.vue": "vue",
-        "*.php-cs": "php"
-    },
+  // Files
+  "files.autoSave": "onFocusChange",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.blade.php": "html",
+    "*.php": "php",
+    "*.vue": "vue",
+    "*.php-cs": "php"
+  },
 
-    // Project Manager
-    "projectManager.git.baseFolders": [
-        "~/Projects",
-        "~/Work"
-    ],
+  // Project Manager
+  "projectManager.git.baseFolders": ["~/Projects", "~/Work"],
 
-    // Search
-    "search.collapseResults": "alwaysCollapse",
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/bower_components": true,
-        "**/.git": true,
-        "**/storage": true,
-        "**/tests": true,
-        "_ide_helper.php": true,
-        "_ide_helper_models.php": true,
-        "package-lock.json": true
-    },
+  // Search
+  "search.collapseResults": "alwaysCollapse",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true,
+    "**/storage": true,
+    "**/tests": true,
+    "_ide_helper.php": true,
+    "_ide_helper_models.php": true,
+    "package-lock.json": true
+  },
 
-    // Editor
-    "editor.fontSize": 14,
-    "editor.fontFamily": "MesloLGS Nerd Font Mono",
-    "editor.inlineSuggest.enabled": true,
-    "editor.tokenColorCustomizations": {
-        "[Tokyo Night]": { // or "[Tokyo Night Storm]"
-            "textMateRules": [
-            {
-                "scope": [
-                    "comment keyword.codetag.notation",
-                    "comment.block.documentation keyword",
-                    "comment.block.documentation storage.type.class"
-                ],
-                "settings": {
-                    "foreground": "#bb9af7"
-                }
-            },
-            {
-                "scope": ["comment.block.documentation entity.name.type.instance"],
-                "settings": {
-                    "foreground": "#73daca",
-                    "fontStyle": "italic"
-                }
-            },
-            {
-                "scope": [
-                "comment.block.documentation entity.name.type punctuation.definition.bracket"
-                ],
-                "settings": {
-                    "foreground": "#bb9af7"
-                }
-            },
-            {
-                "scope": ["comment.block.documentation variable"],
-                "settings": {
-                    "foreground": "#e0af68",
-                    "fontStyle": "italic"
-                }
-            }
-            ]
+  // Editor
+  "editor.fontSize": 14,
+  "editor.fontFamily": "MesloLGS Nerd Font Mono",
+  "editor.inlineSuggest.enabled": true,
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night]": {
+      // or "[Tokyo Night Storm]"
+      "textMateRules": [
+        {
+          "scope": [
+            "comment keyword.codetag.notation",
+            "comment.block.documentation keyword",
+            "comment.block.documentation storage.type.class"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": ["comment.block.documentation entity.name.type.instance"],
+          "settings": {
+            "foreground": "#73daca",
+            "fontStyle": "italic"
+          }
+        },
+        {
+          "scope": [
+            "comment.block.documentation entity.name.type punctuation.definition.bracket"
+          ],
+          "settings": {
+            "foreground": "#bb9af7"
+          }
+        },
+        {
+          "scope": ["comment.block.documentation variable"],
+          "settings": {
+            "foreground": "#e0af68",
+            "fontStyle": "italic"
+          }
         }
+      ]
+    }
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true // false
+  },
+  "editor.letterSpacing": 0.5,
+  "editor.lineHeight": 22,
+  "editor.cursorBlinking": "smooth",
+  "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'zero'",
+  "editor.formatOnType": false,
+  "editor.formatOnPaste": false,
+  "editor.autoIndent": "advanced",
+  "editor.inlayHints.enabled": "off",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit",
+    "source.removeUnusedImports": "explicit",
+    "source.removeUnusedUses": "explicit"
+  },
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.snippetSuggestions": "bottom",
+  "editor.renderControlCharacters": true,
+  "editor.stickyScroll.enabled": true,
+
+  // TODO Tree
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "@TODO",
+    "@FIXME",
+    "[ ]",
+    "[x]"
+  ],
+
+  // Terminal
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.defaultProfile.linux": "tmux",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.allowChords": true,
+  "terminal.integrated.tabs.enabled": false,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.ignoreProcessNames": [
+    "starship",
+    "oh-my-posh",
+    "bash",
+    "zsh",
+    "fish",
+    "tmux"
+  ],
+  "terminal.integrated.tabs.title": "${cwd} | ${process}",
+
+  // CoPilot
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "github.copilot.editor.enableAutoCompletions": true,
+
+  // ShellCheck
+  "shellcheck.enable": true,
+  "shellcheck.enableQuickFix": true,
+  "shellcheck.run": "onType",
+  "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
+  "shellcheck.exclude": [],
+  "shellcheck.customArgs": [],
+  "shellcheck.ignorePatterns": {
+    "**/*.csh": true,
+    "**/*.cshrc": true,
+    "**/*.fish": true,
+    "**/*.login": true,
+    "**/*.logout": true,
+    "**/*.tcsh": true,
+    "**/*.tcshrc": true,
+    "**/*.xonshrc": true,
+    "**/*.xsh": true,
+    "**/*.zsh": true,
+    "**/*.zshrc": true,
+    "**/zshrc": true,
+    "**/*.zprofile": true,
+    "**/zprofile": true,
+    "**/*.zlogin": true,
+    "**/zlogin": true,
+    "**/*.zlogout": true,
+    "**/zlogout": true,
+    "**/*.zshenv": true,
+    "**/zshenv": true,
+    "**/*.zsh-theme": true
+  },
+  "shellcheck.ignoreFileSchemes": ["git", "gitfs", "output"],
+
+  // PHP
+  "php.suggest.basic": true,
+
+  // PHPCS
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.rules": "@PSR2",
+  "php-cs-fixer.config": ".php_cs;.php_cs.dist",
+  "php-cs-fixer.allowRisky": false,
+  "php-cs-fixer.pathMode": "override",
+  "php-cs-fixer.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/storage/**",
+    "**/resources/views/**",
+    "**/database/migrations/**",
+    "**/tests/**",
+    "**/storage/framework/views/**",
+    "**/vendor",
+    "_ide_helper.php",
+    "_ide_helper_models"
+  ],
+  "php-cs-fixer.autoFixByBracket": true,
+  "php-cs-fixer.autoFixBySemicolon": true,
+  "php-cs-fixer.formatHtml": false,
+  "php-cs-fixer.documentFormattingProvider": true,
+  "php-cs-fixer.lastDownload": 1721168020899,
+
+  // PHPDoc Block
+  "php-docblocker.returnGap": true,
+  "php-docblocker.qualifyClassNames": true,
+  "php-docblocker.alignParams": true,
+  "php-docblocker.useShortNames": true,
+  "php-docblocker.author": {
+    "name": "Michael Karbowiak",
+    "email": "michael@karbowiak.dk"
+  },
+
+  // SonarLint
+  "sonarlint.rules": {
+    "php:S1808": {
+      "level": "off"
     },
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": true,
-        "strings": true // false
+    "php:S112": {
+      "level": "off"
     },
-    "editor.letterSpacing": 0.5,
-    "editor.lineHeight": 22,
-    "editor.cursorBlinking": "smooth",
-    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'zero'",
-    "editor.formatOnType": false,
-    "editor.formatOnPaste": false,
-    "editor.autoIndent": "advanced",
-    "editor.inlayHints.enabled": "off",
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit",
-        "source.fixAll": "explicit",
-        "source.removeUnusedImports": "explicit",
-        "source.removeUnusedUses": "explicit"
+    "php:S103": {
+      "level": "off"
     },
-    "editor.gotoLocation.multipleDefinitions": "goto",
-    "editor.snippetSuggestions": "bottom",
-    "editor.renderControlCharacters": true,
-    "editor.stickyScroll.enabled": true,
-
-    // TODO Tree
-    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "@TODO",
-        "@FIXME",
-        "[ ]",
-        "[x]"
-    ],
-
-    // Terminal
-    "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
-    "terminal.integrated.copyOnSelection": true,
-    "terminal.integrated.defaultProfile.linux": "tmux",
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.shellIntegration.enabled": true,
-    "terminal.integrated.allowChords": true,
-    "terminal.integrated.tabs.enabled": false,
-    "terminal.integrated.gpuAcceleration": "on",
-    "terminal.integrated.ignoreProcessNames": [
-        "starship",
-        "oh-my-posh",
-        "bash",
-        "zsh",
-        "fish",
-        "tmux",
-    ],
-    "terminal.integrated.tabs.title": "${cwd} | ${process}",
-
-    // CoPilot
-    "github.copilot.enable": {
-        "*": true,
-        "yaml": true,
-        "plaintext": true,
-        "markdown": true
+    "php:S107": {
+      "level": "off"
     },
-    "github.copilot.editor.enableAutoCompletions": true,
-
-    // ShellCheck
-    "shellcheck.enable": true,
-    "shellcheck.enableQuickFix": true,
-    "shellcheck.run": "onType",
-    "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
-    "shellcheck.exclude": [],
-    "shellcheck.customArgs": [],
-    "shellcheck.ignorePatterns": {
-        "**/*.csh": true,
-        "**/*.cshrc": true,
-        "**/*.fish": true,
-        "**/*.login": true,
-        "**/*.logout": true,
-        "**/*.tcsh": true,
-        "**/*.tcshrc": true,
-        "**/*.xonshrc": true,
-        "**/*.xsh": true,
-        "**/*.zsh": true,
-        "**/*.zshrc": true,
-        "**/zshrc": true,
-        "**/*.zprofile": true,
-        "**/zprofile": true,
-        "**/*.zlogin": true,
-        "**/zlogin": true,
-        "**/*.zlogout": true,
-        "**/zlogout": true,
-        "**/*.zshenv": true,
-        "**/zshenv": true,
-        "**/*.zsh-theme": true
+    "php:S3776": {
+      "level": "off"
     },
-    "shellcheck.ignoreFileSchemes": ["git", "gitfs", "output"],
-
-    // PHP
-    "php.suggest.basic": true,
-
-    // PHPCS
-    "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-    "php-cs-fixer.onsave": true,
-    "php-cs-fixer.rules": "@PSR2",
-    "php-cs-fixer.config": ".php_cs;.php_cs.dist",
-    "php-cs-fixer.allowRisky": false,
-    "php-cs-fixer.pathMode": "override",
-    "php-cs-fixer.exclude": [
-        "**/.git/**",
-        "**/.svn/**",
-        "**/.hg/**",
-        "**/CVS/**",
-        "**/.DS_Store/**",
-        "**/node_modules/**",
-        "**/bower_components/**",
-        "**/storage/**",
-        "**/resources/views/**",
-        "**/database/migrations/**",
-        "**/tests/**",
-        "**/storage/framework/views/**",
-        "**/vendor",
-        "_ide_helper.php",
-        "_ide_helper_models"
-    ],
-    "php-cs-fixer.autoFixByBracket": true,
-    "php-cs-fixer.autoFixBySemicolon": true,
-    "php-cs-fixer.formatHtml": false,
-    "php-cs-fixer.documentFormattingProvider": true,
-    "php-cs-fixer.lastDownload": 1721168020899,
-
-    // PHPDoc Block
-    "php-docblocker.returnGap": true,
-    "php-docblocker.qualifyClassNames": true,
-    "php-docblocker.alignParams": true,
-    "php-docblocker.useShortNames": true,
-    "php-docblocker.author": {
-        "name": "Michael Karbowiak",
-        "email": "michael@karbowiak.dk"
+    "docker:S6595": {
+      "level": "off"
     },
-
-    // SonarLint
-    "sonarlint.rules": {
-        "php:S1808": {
-            "level": "off"
-        },
-        "php:S112": {
-            "level": "off"
-        },
-        "php:S103": {
-            "level": "off"
-        },
-        "php:S107": {
-            "level": "off"
-        },
-        "php:S3776": {
-            "level": "off"
-        },
-        "docker:S6595": {
-            "level": "off"
-        },
-        "php:S4833": {
-            "level": "off"
-        },
-        "php:S1186": {
-            "level": "off"
-        },
-        "php:S125": {
-            "level": "off"
-        },
-        "kubernetes:S6869": {
-            "level": "off"
-        },
-        "kubernetes:S6864": {
-            "level": "off"
-        },
-        "kubernetes:S6865": {
-            "level": "off"
-        }
+    "php:S4833": {
+      "level": "off"
     },
-
-    // Svelte
-    "svelte.enable-ts-plugin": true,
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "php:S1186": {
+      "level": "off"
     },
+    "php:S125": {
+      "level": "off"
+    },
+    "kubernetes:S6869": {
+      "level": "off"
+    },
+    "kubernetes:S6864": {
+      "level": "off"
+    },
+    "kubernetes:S6865": {
+      "level": "off"
+    }
+  },
+
+  // Svelte
+  "svelte.enable-ts-plugin": true
 }
