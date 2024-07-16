@@ -1,0 +1,131 @@
+{
+    // VSCode Visuals
+    "workbench.colorTheme": "Tokyo Night",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // Editor
+    "editor.fontSize": 14,
+    "editor.fontFamily": "MesloLGS Nerd Font Mono",
+    "editor.tokenColorCustomizations": {
+        "[Tokyo Night]": { // or "[Tokyo Night Storm]"
+            "textMateRules": [
+            {
+                "scope": [
+                    "comment keyword.codetag.notation",
+                    "comment.block.documentation keyword",
+                    "comment.block.documentation storage.type.class"
+                ],
+                "settings": {
+                    "foreground": "#bb9af7"
+                }
+            },
+            {
+                "scope": ["comment.block.documentation entity.name.type.instance"],
+                "settings": {
+                    "foreground": "#73daca",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                "comment.block.documentation entity.name.type punctuation.definition.bracket"
+                ],
+                "settings": {
+                    "foreground": "#bb9af7"
+                }
+            },
+            {
+                "scope": ["comment.block.documentation variable"],
+                "settings": {
+                    "foreground": "#e0af68",
+                    "fontStyle": "italic"
+                }
+            }
+            ]
+        }
+    },
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true // false
+    },
+    "editor.letterSpacing": 0.5,
+    "editor.lineHeight": 22,
+    "editor.cursorBlinking": "smooth",
+    "editor.fontLigatures": "'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'zero'",
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": false,
+    "editor.autoIndent": "advanced",
+    "editor.inlayHints.enabled": "off",
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit",
+        "source.removeUnusedImports": "explicit",
+        "source.removeUnusedUses": "explicit"
+    },
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.snippetSuggestions": "bottom",
+    "editor.renderControlCharacters": true,
+    "editor.stickyScroll.enabled": true,
+
+    // Terminal
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font Mono",
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.allowChords": true,
+    "terminal.integrated.ignoreProcessNames": [
+        "starship",
+        "oh-my-posh",
+        "bash",
+        "zsh",
+        "fish",
+        "tmux",
+    ],
+    "terminal.integrated.tabs.title": "${cwd} | ${process}",
+
+    // CoPilot
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+
+    // ShellCheck
+    "shellcheck.enable": true,
+    "shellcheck.enableQuickFix": true,
+    "shellcheck.run": "onType",
+    "shellcheck.executablePath": "", // Priority: user defined > bundled shellcheck binary > "shellcheck"
+    "shellcheck.exclude": [],
+    "shellcheck.customArgs": [],
+    "shellcheck.ignorePatterns": {
+        "**/*.csh": true,
+        "**/*.cshrc": true,
+        "**/*.fish": true,
+        "**/*.login": true,
+        "**/*.logout": true,
+        "**/*.tcsh": true,
+        "**/*.tcshrc": true,
+        "**/*.xonshrc": true,
+        "**/*.xsh": true,
+        "**/*.zsh": true,
+        "**/*.zshrc": true,
+        "**/zshrc": true,
+        "**/*.zprofile": true,
+        "**/zprofile": true,
+        "**/*.zlogin": true,
+        "**/zlogin": true,
+        "**/*.zlogout": true,
+        "**/zlogout": true,
+        "**/*.zshenv": true,
+        "**/zshenv": true,
+        "**/*.zsh-theme": true
+    },
+    "shellcheck.ignoreFileSchemes": ["git", "gitfs", "output"],
+}
