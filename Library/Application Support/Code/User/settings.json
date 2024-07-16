@@ -1,4 +1,7 @@
 {
+    // General settings
+    "explorer.confirmDelete": false,
+
     // VSCode Visuals
     "workbench.colorTheme": "Tokyo Night",
     "workbench.editor.empty.hint": "hidden",

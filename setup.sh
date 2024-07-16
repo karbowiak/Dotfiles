@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Get the directory that the setup.sh is located in
+SETUP_FILE_LOCATION=$(cd "$(dirname "$0")" && pwd)
+
 # Install brew if not installed
 brew_install_path="/opt/homebrew/bin/brew"
 if [ ! -f "$brew_install_path" ]; then
@@ -73,11 +76,8 @@ packages=(
     "font-noto-sans-symbols-2"
 )
 
-# Generate a single string of package names
-packages_string=$(printf "%s " "${packages[@]}")
-
 # Install packages
-brew install -q "$packages_string"
+brew install -q "${packages[@]}"
 
 # Tmux
 mkdir -p ~/.tmux/plugins
@@ -89,3 +89,8 @@ else
 fi
 
 # For each extension in the vscode.extensions.txt file, install them with code --install-extension
+echo "Installing VSCode extensions..."
+EXTENSION_FILE="$SETUP_FILE_LOCATION/vscode.extensions.txt"
+while IFS= read -r line; do
+    code --install-extension "$line"
+done <"$EXTENSION_FILE"
