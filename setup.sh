@@ -78,6 +78,7 @@ packages=(
     # Applications
     "1password"
     "visual-studio-code"
+    "zed"
 )
 
 # Install packages
