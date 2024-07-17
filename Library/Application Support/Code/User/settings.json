@@ -222,10 +222,6 @@
   "php-docblocker.qualifyClassNames": true,
   "php-docblocker.alignParams": true,
   "php-docblocker.useShortNames": true,
-  "php-docblocker.author": {
-    "name": "Michael Karbowiak",
-    "email": "michael@karbowiak.dk"
-  },
 
   // SonarLint
   "sonarlint.rules": {
