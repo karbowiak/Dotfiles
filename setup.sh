@@ -74,6 +74,10 @@ packages=(
     # Fonts
     "homebrew/cask/font-monaspace-nerd-font"
     "homebrew/cask/font-noto-sans-symbols-2"
+
+    # Applications
+    "1password"
+    "visual-studio-code"
 )
 
 # Install packages
@@ -89,8 +93,12 @@ else
 fi
 
 # For each extension in the vscode.extensions.txt file, install them with code --install-extension
-echo "Installing VSCode extensions..."
 EXTENSION_FILE="$SETUP_FILE_LOCATION/vscode.extensions.txt"
 while IFS= read -r line; do
+    # Check if the extension is already installed, if it is then skip it silently
+    if code --list-extensions | grep -q "$line"; then
+        continue
+    fi
+
     code --install-extension "$line"
 done <"$EXTENSION_FILE"
