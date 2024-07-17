@@ -1,3 +1,4 @@
 .vscode/settings.json
 .vim/plugged/*
 .vim/plug.vim
+.gitconfig-user

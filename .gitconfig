@@ -1,8 +1,5 @@
-# This is Git's per-user configuration file.
-[user]
-  name = Michael Karbowiak
-  email = michael@karbowiak.dk
-  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIE3CnISvv/khWRib7D0u//4uZpfIMNXjLv0s5VM1Losz
+[include]
+  path = ~/.gitconfig-user
 [gpg]
   format = ssh
 [gpg "ssh"]
