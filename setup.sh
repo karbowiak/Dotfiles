@@ -40,6 +40,7 @@ packages=(
     "gh"
     "glab"
     "gsed"
+    "gum"
 
     # Programming Languages and Package Managers
     "composer"
@@ -105,3 +106,16 @@ done <"$EXTENSION_FILE"
 
 # Symlink the dotfiles
 stow . -t ~
+
+# Check if the ~/.gitconfig-user file exists, otherwise prompt to make it
+if [ ! -f ~/.gitconfig-user ]; then
+    createGitConfigUserFile=$(gum confirm "Would you like to create a ~/.gitconfig-user file? (y/n)")
+
+    if [ $? -eq 0 ]; then
+        name=$(gum input --prompt "What is your name? " --placeholder "")
+        email=$(gum input --prompt "What is your email? " --placeholder "")
+        echo "[user]" > ~/.gitconfig-user
+        echo "    name = $name" >> ~/.gitconfig-user
+        echo "    email = $email" >> ~/.gitconfig-user
+    fi
+fi
