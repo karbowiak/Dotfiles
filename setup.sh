@@ -13,6 +13,7 @@ fi
 packages=(
     # CLI Tools
     "bat"
+    "git-delta"
     "curl"
     "eza"
     "fd"
@@ -39,8 +40,6 @@ packages=(
     "gh"
     "glab"
     "gsed"
-    "bat"
-    "git-delta"
 
     # Programming Languages and Package Managers
     "composer"
